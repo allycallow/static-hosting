@@ -31,11 +31,11 @@ resource "aws_cloudfront_distribution" "frontend" {
 
     viewer_protocol_policy = "allow-all"
     compress               = true
-    lambda_function_association {
-      event_type   = "viewer-request"
-      lambda_arn   = "${lookup(var.FRONTEND_LAMBDA_FUNCTION_ASSOCIATION, terraform.workspace)}"
-      include_body = false
-    }
+    # lambda_function_association {
+    #   event_type   = "viewer-request"
+    #   lambda_arn   = "${lookup(var.FRONTEND_LAMBDA_FUNCTION_ASSOCIATION, terraform.workspace)}"
+    #   include_body = false
+    # }
 
     min_ttl     = 0
     default_ttl = 3600

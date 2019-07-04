@@ -13,7 +13,8 @@ resource "aws_cloudfront_distribution" "frontend" {
 
   enabled = true
 
-  aliases = "${var.FRONTEND_ALIASES[terraform.workspace]}"
+  # ! UNCOMMENT IF YOU HAVE DOMAIN AND SSL SETUP
+  # aliases = "${var.FRONTEND_ALIASES[terraform.workspace]}"
 
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]

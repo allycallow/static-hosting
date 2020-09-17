@@ -1,4 +1,4 @@
-# TTW Static Hosting Demo
+# Static Hosting
 
 An example on how to setup static hosting on a s3 bucket. With technologies using CircleCi, Terraform and Cloufront
 
